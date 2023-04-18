@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="brand-icon" alt="travelers hub" src="assets/icons/main-icon.png"/>
+            Administracion Coderhouse
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <button *ngIf="loggedIn" class="logout-button" (click)="handleLogout()">Cerrar Sesión</button>
+            <button *ngIf="!loggedIn" class="login-button" [routerLink]="['/login']">Iniciar Sesión</button>
+        </div>
+        </div>
+    </div>
+</nav>
